@@ -1,0 +1,53 @@
+<!--
+  Generated template for the OrderBattery page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+    <ion-navbar color="danger">
+        <ion-title>Order Battery</ion-title>
+    </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+    <ion-searchbar></ion-searchbar>
+
+    <div class="rg-container">
+        <div class="rg-content">
+            <table class="rg-table zebra">
+                <thead>
+                    <tr>
+                        <th class="text rg-th">Name</th>
+                        <th class="text rg-th">Date</th>
+                        <th class="text rg-th">Bat. Size</th>
+                        <th class="text rg-th">Car Make</th>
+                        <th class="text rg-th">Car Year</th>
+                        <th class="text rg-th">Quantity</th>
+                        <th class="text rg-th">Old Battery?</th>
+                        <th class="text rg-th">Location</th>
+                        <th class="text rg-th">Contact No</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let orderBattery of all | async">
+                        <td class="text" data-title="Name">{{ orderBattery.name }}</td>
+                        <td class="text" data-title="Date">{{ orderBattery.date }}</td>
+                        <td class="text" data-title="Bat. Size">{{ orderBattery.batterySize }}</td>
+                        <td class="text" data-title="Car Make">{{ orderBattery.carMake }}</td>
+                        <td class="text" data-title="Car Year">{{ orderBattery.carYear }}</td>
+                        <td class="text" data-title="Quantity">{{ orderBattery.quantity }}</td>
+                        <td class="text" data-title="Old Battery">{{ orderBattery.oldBattery }}</td>
+                        <td class="text" data-title="Location">{{ orderBattery.price }}</td>
+                        <td class="text" data-title="Contact No">{{ orderBattery.contact }}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+</ion-content>

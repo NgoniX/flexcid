@@ -1,17 +1,36 @@
 <ion-menu [content]="content">
-  <ion-header>
-    <ion-toolbar>
-      <ion-title>Menu</ion-title>
-    </ion-toolbar>
-  </ion-header>
+    <ion-header>
+        <ion-toolbar>
+            <ion-title>Menu</ion-title>
 
-  <ion-content>
-    <ion-list>
-      <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">
-        {{p.title}}
-      </button>
-    </ion-list>
-  </ion-content>
+            <div align="center">
+                <img src="img/user.png" class="user_icon" alt="">
+            </div>
+
+
+        </ion-toolbar>
+    </ion-header>
+
+    <ion-content>
+        <ion-list no-lines class="icon_padding">
+
+
+            <button ion-item (click)="goToRA()" menuToggle> <ion-icon name="ionitron" class="spacing"></ion-icon> Retail Agent</button>
+            <button ion-item (click)="goToOB()" menuToggle> <ion-icon name="document" class="spacing"></ion-icon> Order Battery</button>
+            <button ion-item (click)="goToFR()" menuToggle> <ion-icon name="list-box" class="spacing"></ion-icon> Flexcid Retails</button>
+            <button ion-item (click)="goToMD()" menuToggle> <ion-icon name="briefcase" class="spacing"></ion-icon> Merchandising</button>
+            <button ion-item (click)="goToSS()" menuToggle> <ion-icon name="bonfire" class="spacing"></ion-icon> Scrap Shop</button>
+            <button ion-item (click)="goToCL()" menuToggle> <ion-icon name="hand" class="spacing"></ion-icon> Claims</button>
+            <button ion-item (click)="goToCR()" menuToggle> <ion-icon name="chatbubbles" class="spacing"></ion-icon> Chatroom</button>
+
+            <ion-list-header>
+                More
+            </ion-list-header>
+
+            <button ion-item (click)="goToLogin()" menuToggle> <ion-icon name="lock" class="spacing"></ion-icon> Login</button>
+            <button ion-item (click)="goToRegister()" menuToggle> <ion-icon name="contacts" class="spacing"></ion-icon> Register</button>
+        </ion-list>
+    </ion-content>
 
 </ion-menu>
 

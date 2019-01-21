@@ -1,0 +1,64 @@
+<!--
+  Generated template for the RetailAgency page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+    <ion-navbar color="danger">
+        <ion-title>Retail Agency</ion-title>
+
+        <ion-buttons end>
+            <button ion-button icon-only (click)="addRetailAgency()">
+        <ion-icon name="add-circle"></ion-icon>
+      </button>
+        </ion-buttons>
+
+    </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+    <ion-searchbar></ion-searchbar>
+
+    <div class="rg-container">
+        <div class="rg-content">
+            <table class="rg-table zebra">
+                <thead>
+                    <tr>
+                        <th class="text rg-th">Agent No</th>
+                        <th class="text rg-th">Date</th>
+                        <th class="text rg-th">Bat. Size</th>
+                        <th class="text rg-th">Bat. Type</th>
+                        <th class="text rg-th">Quantity</th>
+                        <th class="text rg-th">Tested</th>
+                        <th class="text rg-th">Guarantee</th>
+                        <th class="text rg-th">Price</th>
+                        <th class="text rg-th">Bat. Sold</th>
+                        <th class="text rg-th">Collection</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let retail of all | async">
+                        <td class="text" data-title="Agent No">{{ retail.agentNumber }}</td>
+                        <td class="text" data-title="Date">{{ retail.date }}</td>
+                        <td class="text" data-title="Bat. Size">{{ retail.batterySize }}</td>
+                        <td class="text" data-title="Bat. Type">{{ retail.batteryType }}</td>
+                        <td class="text" data-title="Quantity">{{ retail.quantity }}</td>
+                        <td class="text" data-title="Tested">{{ retail.tested }}</td>
+                        <td class="text" data-title="Guarantee">{{ retail.guarantee }}</td>
+                        <td class="text" data-title="Price">{{ retail.price }}</td>
+                        <td class="text" data-title="Bat. Sold">{{ retail.batterySold }}</td>
+                        <td class="text" data-title="Collection">{{ retail.collection }}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+
+
+</ion-content>

@@ -1,0 +1,62 @@
+<!--
+  Generated template for the Merchandising page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+    <ion-navbar color="danger">
+        <ion-title>Merchandising</ion-title>
+
+        <ion-buttons end>
+            <button ion-button icon-only (click)="addMerchandising()">
+        <ion-icon name="add-circle"></ion-icon>
+      </button>
+        </ion-buttons>
+
+    </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+    <div class="rg-container">
+        <div class="rg-content">
+            <table class="rg-table zebra">
+                <thead>
+                    <tr>
+                        <th class="text rg-th">No of Bat.</th>
+                        <th class="text rg-th">Date</th>
+                        <th class="text rg-th">Bat. Size</th>
+                        <th class="text rg-th">Merch. No</th>
+                        <th class="text rg-th">Quantity</th>
+                        <th class="text rg-th">Collected</th>
+                        <th class="text rg-th">Guarantee</th>
+                        <th class="text rg-th">Price</th>
+                        <th class="text rg-th">Bat. Sold</th>
+                        <th class="text rg-th">Collection</th>
+                        <th class="text rg-th">Invoice No</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let merchandising of all | async">
+                        <td class="text" data-title="No of Bat.">{{ merchandising.batNo }}</td>
+                        <td class="text" data-title="Date">{{ merchandising.date }}</td>
+                        <td class="text" data-title="Bat. Size">{{ merchandising.batterySize }}</td>
+                        <td class="text" data-title="Merch No">{{ merchandising.merchNo }}</td>
+                        <td class="text" data-title="Quantity">{{ merchandising.quantity }}</td>
+                        <td class="text" data-title="Collected">{{ merchandising.collected }}</td>
+                        <td class="text" data-title="Guarantee">{{ merchandising.guarantee }}</td>
+                        <td class="text" data-title="Price">{{ merchandising.price }}</td>
+                        <td class="text" data-title="Bat. Sold">{{ merchandising.batterySold }}</td>
+                        <td class="text" data-title="Collection">{{ merchandising.collection }}</td>
+                        <td class="text" data-title="Invoice No">{{ merchandising.invoiceNo }}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+</ion-content>

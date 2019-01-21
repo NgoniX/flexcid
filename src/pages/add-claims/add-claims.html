@@ -1,0 +1,49 @@
+
+<ion-header>
+  <ion-navbar color="danger">
+    <ion-title>Add Claims</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding class="add-retail">
+  <ion-item>
+    <ion-label stacked>Name</ion-label>
+    <ion-input [(ngModel)]="agentNumber" type="text" placeholder="Enter Agent Number"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label stacked>Date</ion-label>
+    <ion-input [(ngModel)]="date" type="date" placeholder="Enter Date"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label stacked>Battery Size</ion-label>
+    <ion-input [(ngModel)]="batterySize" type="text" placeholder="Enter battery size"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label stacked>Code</ion-label>
+    <ion-input [(ngModel)]="code" type="text" placeholder="Enter code"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label stacked>Invoice No</ion-label>
+    <ion-input [(ngModel)]="invoiceNo" type="text" placeholder="Enter invoice no"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label stacked>Flexcid Branch</ion-label>
+    <ion-input [(ngModel)]="flexcidBranch" type="text" placeholder="Enter Flexcid Branch"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label stacked>Location</ion-label>
+    <ion-input [(ngModel)]="location" type="text" placeholder="Enter location"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label stacked>Contact</ion-label>
+    <ion-input [(ngModel)]="contact" type="text" placeholder="Enter contact"></ion-input>
+  </ion-item>
+  
+  <button class="add_retail_btn" ion-button block color="danger"
+  (click)="addClaimsInfo( name, date, batterySize, code, invoiceNo, flexcidBranch, location, contact )"> Submit </button>
+</ion-content>

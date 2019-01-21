@@ -1,0 +1,76 @@
+
+<ion-header>
+  <ion-navbar color="danger">
+    <ion-title>Add Flexcid Retail Agency</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding class="add-retail">
+  <ion-item>
+    <ion-label stacked>No of Batteries</ion-label>
+    <ion-input [(ngModel)]="agentNumber" type="text" placeholder="Enter Agent Number"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label stacked>Date</ion-label>
+    <ion-input [(ngModel)]="date" type="date" placeholder="Enter Date"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label stacked>Battery Size</ion-label>
+    <ion-input [(ngModel)]="batterySize" type="text" placeholder="Enter battery size"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label stacked>Battery Type</ion-label>
+    <ion-input [(ngModel)]="batteryType" type="text" placeholder="Enter battery type"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label stacked>Quantity</ion-label>
+    <ion-input [(ngModel)]="quantity" type="text" placeholder="Enter quantity"></ion-input>
+  </ion-item>
+
+
+	<ion-item>
+    <ion-label stacked>Tested?</ion-label>
+  </ion-item>
+  <ion-list radio-group [(ngModel)]="tested">
+
+	  <ion-item>
+	    <ion-label>Yes</ion-label>
+	    <ion-radio value="yes"></ion-radio>
+	  </ion-item>
+	  <ion-item>
+	    <ion-label>No</ion-label>
+	    <ion-radio value="no"></ion-radio>
+	  </ion-item>
+  </ion-list>
+
+  <ion-item>
+    <ion-label stacked>Guarantee</ion-label>
+    <ion-input [(ngModel)]="guarantee" type="text" placeholder="Enter guarantee"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label stacked>Price</ion-label>
+    <ion-input [(ngModel)]="price" type="text" placeholder="Enter price"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label stacked>Batteries Sold</ion-label>
+    <ion-input [(ngModel)]="batterySold" type="text" placeholder="Enter number of batteries sold"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label stacked>Collection</ion-label>
+    <ion-input [(ngModel)]="collection" type="text" placeholder="Enter collection"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label stacked>Invoice No</ion-label>
+    <ion-input [(ngModel)]="invoiceNo" type="text" placeholder="Enter invoice no."></ion-input>
+  </ion-item>
+  
+  <button class="add_retail_btn" ion-button block color="danger"
+  (click)="addFlexcidRetailInfo( batNo, date, batterySize, batteryType, quantity, tested, guarantee, price, batterySold, collection, invoiceNo )"> Submit </button>
+  
+</ion-content>

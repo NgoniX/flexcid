@@ -1,0 +1,45 @@
+<ion-header>
+
+    <ion-navbar color="danger">
+        <ion-title>Claims</ion-title>
+    </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+    <ion-searchbar></ion-searchbar>
+
+    <div class="rg-container">
+        <div class="rg-content">
+            <table class="rg-table zebra">
+                <thead>
+                    <tr>
+                        <th class="text rg-th">Name</th>
+                        <th class="text rg-th">Date</th>
+                        <th class="text rg-th">Bat. Size</th>
+                        <th class="text rg-th">Code</th>
+                        <th class="text rg-th">Invoice No</th>
+                        <th class="text rg-th">Flexcid Branch</th>
+                        <th class="text rg-th">Location</th>
+                        <th class="text rg-th">Contact No</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let claim of all | async">
+                        <td class="text" data-title="Name">{{ claim.name }}</td>
+                        <td class="text" data-title="Date">{{ claim.date }}</td>
+                        <td class="text" data-title="Bat. Size">{{ claim.batterySize }}</td>
+                        <td class="text" data-title="Code">{{ claim.code }}</td>
+                        <td class="text" data-title="Invoice No">{{ claim.invoiceNo }}</td>
+                        <td class="text" data-title="Flexcid Branch">{{ claim.flexcidBranch }}</td>
+                        <td class="text" data-title="Location">{{ claim.location }}</td>
+                        <td class="text" data-title="Contact No">{{ claim.contact }}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+</ion-content>

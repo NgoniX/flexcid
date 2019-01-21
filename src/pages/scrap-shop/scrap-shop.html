@@ -1,0 +1,52 @@
+<ion-header>
+
+    <ion-navbar color="danger">
+        <ion-title>Scrap Shop</ion-title>
+
+        <ion-buttons end>
+            <button ion-button icon-only (click)="addScrapShop()">
+        <ion-icon name="add-circle"></ion-icon>
+      </button>
+        </ion-buttons>
+
+    </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+    <div class="rg-container">
+        <div class="rg-content">
+            <table class="rg-table zebra">
+                <thead>
+                    <tr>
+                        <th class="text rg-th">Name</th>
+                        <th class="text rg-th">Date</th>
+                        <th class="text rg-th">Bat. Size</th>
+                        <th class="text rg-th">Location</th>
+                        <th class="text rg-th">Quantity</th>
+                        <th class="text rg-th">Collection</th>
+                        <th class="text rg-th">Deliver</th>
+                        <th class="text rg-th">Total Weight</th>
+                        <th class="text rg-th">Price</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let scrap of all | async">
+                        <td class="text" data-title="Name">{{ scrap.name }}</td>
+                        <td class="text" data-title="Date">{{ scrap.date }}</td>
+                        <td class="text" data-title="Bat. Size">{{ scrap.batterySize }}</td>
+                        <td class="text" data-title="Location">{{ scrap.location }}</td>
+                        <td class="text" data-title="Quantity">{{ scrap.quantity }}</td>
+                        <td class="text" data-title="Collection">{{ scrap.collection }}</td>
+                        <td class="text" data-title="Deliver">{{ scrap.deliver }}</td>
+                        <td class="text" data-title="Total Weight">{{ scrap.totalWeight }}</td>
+                        <td class="text" data-title="Price">{{ scrap.price }}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+</ion-content>

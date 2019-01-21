@@ -1,0 +1,62 @@
+<!--
+  Generated template for the FlexcidRetail page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+    <ion-navbar color="danger">
+        <ion-title>Flexcid Retail</ion-title>
+
+        <ion-buttons end>
+            <button ion-button icon-only (click)="addFlexcidRetail()">
+        <ion-icon name="add-circle"></ion-icon>
+      </button>
+        </ion-buttons>
+
+    </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+    <div class="rg-container">
+        <div class="rg-content">
+            <table class="rg-table zebra">
+                <thead>
+                    <tr>
+                        <th class="text rg-th">No of Bat.</th>
+                        <th class="text rg-th">Date</th>
+                        <th class="text rg-th">Bat. Size</th>
+                        <th class="text rg-th">Bat. Type</th>
+                        <th class="text rg-th">Quantity</th>
+                        <th class="text rg-th">Tested</th>
+                        <th class="text rg-th">Guarantee</th>
+                        <th class="text rg-th">Price</th>
+                        <th class="text rg-th">Bat. Sold</th>
+                        <th class="text rg-th">Collection</th>
+                        <th class="text rg-th">Invoice No</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let flexcidRetail of all | async">
+                        <td class="text" data-title="No of Bat.">{{ flexcidRetail.batNo }}</td>
+                        <td class="text" data-title="Date">{{ flexcidRetail.date }}</td>
+                        <td class="text" data-title="Bat. Size">{{ flexcidRetail.batterySize }}</td>
+                        <td class="text" data-title="Bat. Type">{{ flexcidRetail.batteryType }}</td>
+                        <td class="text" data-title="Quantity">{{ flexcidRetail.quantity }}</td>
+                        <td class="text" data-title="Tested">{{ flexcidRetail.tested }}</td>
+                        <td class="text" data-title="Guarantee">{{ flexcidRetail.guarantee }}</td>
+                        <td class="text" data-title="Price">{{ flexcidRetail.price }}</td>
+                        <td class="text" data-title="Bat. Sold">{{ flexcidRetail.batterySold }}</td>
+                        <td class="text" data-title="Collection">{{ flexcidRetail.collection }}</td>
+                        <td class="text" data-title="Invoice No">{{ flexcidRetail.invoiceNo }}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+</ion-content>

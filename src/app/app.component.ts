@@ -3,8 +3,16 @@ import { Nav, Platform } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
-import { HomePage } from '../pages/home/home';
-import { ListPage } from '../pages/list/list';
+import { TabsPage } from '../pages/tabs/tabs';
+import { RetailAgencyPage } from '../pages/retail-agency/retail-agency';
+import { OrderBatteryPage } from '../pages/order-battery/order-battery';
+import { FlexcidRetailPage } from '../pages/flexcid-retail/flexcid-retail';
+import { MerchandisingPage } from '../pages/merchandising/merchandising';
+import { ScrapShopPage } from '../pages/scrap-shop/scrap-shop';
+import { ClaimsPage } from '../pages/claims/claims';
+
+import { LoginPage } from '../pages/login/login';
+import { RegisterPage } from '../pages/register/register';
 
 @Component({
   templateUrl: 'app.html'
@@ -12,18 +20,12 @@ import { ListPage } from '../pages/list/list';
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
-  rootPage: any = HomePage;
+  rootPage: any = TabsPage;
 
-  pages: Array<{title: string, component: any}>;
 
   constructor(public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen) {
     this.initializeApp();
 
-    // used for an example of ngFor and navigation
-    this.pages = [
-      { title: 'Home', component: HomePage },
-      { title: 'List', component: ListPage }
-    ];
 
   }
 
@@ -36,9 +38,44 @@ export class MyApp {
     });
   }
 
-  openPage(page) {
-    // Reset the content nav to have just this page
-    // we wouldn't want the back button to show in this scenario
-    this.nav.setRoot(page.component);
-  }
+ //go to retail agency
+ goToRA(){
+  this.nav.push(RetailAgencyPage);
+}
+
+//go to order battery
+goToOB(){
+  this.nav.push(OrderBatteryPage);
+}
+
+//go to merchandising
+goToMD(){
+  this.nav.push(MerchandisingPage);
+}
+
+//go to flexcid retail
+goToFR(){
+  this.nav.push(FlexcidRetailPage);
+}
+
+//go to scrap shop
+goToSS(){
+  this.nav.push(ScrapShopPage);
+}
+
+//go to claims
+goToCL(){
+  this.nav.push(ClaimsPage);
+}
+
+
+//go to login page
+goToLogin(){
+  this.nav.push(LoginPage);
+}
+
+//go to register page
+goToRegister(){
+  this.nav.push(RegisterPage);
+}
 }

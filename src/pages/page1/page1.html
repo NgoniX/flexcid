@@ -1,0 +1,57 @@
+<ion-header>
+  <ion-navbar color="danger">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Home</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+<ion-grid>
+
+<ion-row>
+<ion-col class="priceList">Zim Price List</ion-col>
+</ion-row>
+
+<ion-row>
+  <ion-col width-33>616<br><font color="#f53d3d">$50</font></ion-col>
+  <ion-col width-33>622<br><font color="#f53d3d">$50</font></ion-col>
+  <ion-col width-33>628<br><font color="#f53d3d">$50</font></ion-col>
+</ion-row>
+
+<ion-row>
+  <ion-col width-33>631<br><font color="#f53d3d">$60</font></ion-col>
+  <ion-col width-33>639<br><font color="#f53d3d">$70</font></ion-col>
+  <ion-col width-33>646<br><font color="#f53d3d">$80</font></ion-col>
+</ion-row>
+
+<ion-row>
+  <ion-col width-33>650<br><font color="#f53d3d">$80</font></ion-col>
+  <ion-col width-33>652<br><font color="#f53d3d">$80</font></ion-col>
+  <ion-col width-33>657<br><font color="#f53d3d">$95</font></ion-col>
+</ion-row>
+
+<ion-row>
+  <ion-col width-33>690<br><font color="#f53d3d">$150</font></ion-col>
+  <ion-col width-33>683<br><font color="#f53d3d">$130</font></ion-col>
+  <ion-col width-33>674<br><font color="#f53d3d">$100</font></ion-col>
+</ion-row>
+
+</ion-grid>
+<!-- align to the bottom of the page -->
+    <div class="buttons-align">
+        <div align="left">
+          <p>
+          <button ion-button color="light">Support</button>
+          <button ion-button color="light" (click)="addClaims()">Claims</button>
+          <button ion-button color="danger" (click)="addOrder()">Order Now</button>
+          </p>
+        </div>
+    </div>
+  
+</ion-content>
+
+
+
+

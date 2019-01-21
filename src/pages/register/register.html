@@ -1,0 +1,97 @@
+<ion-header>
+
+    <ion-navbar color="danger">
+        <ion-title>Register</ion-title>
+    </ion-navbar>
+
+</ion-header>
+
+<ion-content padding>
+    <form [formGroup]="registerForm" (ngSubmit)="doRegister($event)" novalidate>
+        <ion-item>
+            <ion-label stacked>Full Name</ion-label>
+            <ion-input #fullname formControlName="fullname" type="text" placeholder="Your Full Name" [class.invalid]="!registerForm.controls.fullname.valid && (fullnameChanged || submitAttempt)"></ion-input>
+        </ion-item>
+        <ion-item class="error-message" *ngIf="!registerForm.controls.fullname.valid  && (fullnameChanged || submitAttempt)">
+            <p>Your full name can't empty.</p>
+        </ion-item>
+
+        <ion-item>
+            <ion-label stacked>Email</ion-label>
+            <ion-input #email formControlName="email" type="email" placeholder="Your email address" [class.invalid]="!registerForm.controls.email.valid && (emailChanged || submitAttempt)"></ion-input>
+        </ion-item>
+        <ion-item class="error-message" *ngIf="!registerForm.controls.email.valid  && (emailChanged || submitAttempt)">
+            <p>Please enter a valid email.</p>
+        </ion-item>
+
+        <ion-item>
+            <ion-label stacked>Password</ion-label>
+            <ion-input #password formControlName="password" type="password" placeholder="Your password" [class.invalid]="!registerForm.controls.password.valid && (passwordChanged || submitAttempt)"></ion-input>
+        </ion-item>
+        <ion-item class="error-message" *ngIf="!registerForm.controls.password.valid  && (passwordChanged || submitAttempt)">
+            <p>Your password needs more than 6 characters.</p>
+        </ion-item>
+
+        <ion-item>
+            <ion-label stacked>Location</ion-label>
+            <ion-input #location formControlName="location" type="text" placeholder="Your Location" [class.invalid]="!registerForm.controls.location.valid && (fullnameChanged || submitAttempt)"></ion-input>
+        </ion-item>
+        <ion-item class="error-message" *ngIf="!registerForm.controls.location.valid  && (fullnameChanged || submitAttempt)">
+            <p>Location can't empty.</p>
+        </ion-item>
+
+        <ion-item>
+            <ion-label stacked>Country</ion-label>
+            <ion-input #country formControlName="country" type="text" placeholder="Your Country" [class.invalid]="!registerForm.controls.country.valid && (fullnameChanged || submitAttempt)"></ion-input>
+        </ion-item>
+        <ion-item class="error-message" *ngIf="!registerForm.controls.country.valid  && (fullnameChanged || submitAttempt)">
+            <p>Country can't empty.</p>
+        </ion-item>
+
+        <ion-item>
+            <ion-label stacked>Phone</ion-label>
+            <ion-input #phone formControlName="phone" type="text" placeholder="Your Phone" [class.invalid]="!registerForm.controls.phone.valid && (fullnameChanged || submitAttempt)"></ion-input>
+        </ion-item>
+        <ion-item class="error-message" *ngIf="!registerForm.controls.phone.valid  && (fullnameChanged || submitAttempt)">
+            <p>Phone can't empty.</p>
+        </ion-item>
+
+        <ion-item>
+            <ion-label stacked>Individual or Company?</ion-label>
+        </ion-item>
+        <ion-list radio-group formControlName="individualComp">
+            <ion-item>
+                <ion-label>Individual</ion-label>
+                <ion-radio value="individual"></ion-radio>
+            </ion-item>
+            <ion-item>
+                <ion-label>Company</ion-label>
+                <ion-radio value="company"></ion-radio>
+            </ion-item>
+        </ion-list>
+
+        <ion-item>
+            <ion-label stacked>Choose Role</ion-label>
+        </ion-item>
+        <ion-list radio-group formControlName="role">
+            <ion-item>
+                <ion-label>Merchandiser</ion-label>
+                <ion-radio value="merchandiser"></ion-radio>
+            </ion-item>
+            <ion-item>
+                <ion-label>Retail Agent</ion-label>
+                <ion-radio value="retail_agent"></ion-radio>
+            </ion-item>
+            <ion-item>
+                <ion-label>Scrap Agent</ion-label>
+                <ion-radio value="scrap_agent"></ion-radio>
+            </ion-item>
+        </ion-list>
+
+
+
+        <button ion-button block type="submit" color="danger">
+      Register
+    </button>
+    </form>
+</ion-content>
